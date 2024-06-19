@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker Task</title>
+    <link rel="shortcut icon" href="./imgs/1c98852d814e0b3e5e7534bf7a044cf3.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+
+<body>
+  <div class="container position-relative">
+     <div class="message d-none position-absolute bg-white d-flex flex-column p-3 fw-bold " id="message-box">
+      <button  onclick="hide_message()" class="fa-solid fa-xmark  fa-2x position-absolute end-0 border-0 me-3 bg-black"></button>
+      <div class="box p-2 mt-3"></div>
+     <p class="fw-bolder">Site Name or Url is not valid, Please follow the rules below :</p>
+     <div class="box p-2">
+      <i class="fa-solid fa-arrow-right-from-bracket text-danger"></i>
+     <span class="">Site name must contain at least 3 characters</span>
+     </div>
+     <div class="box p-2">
+      <i class="fa-solid fa-arrow-right-from-bracket text-danger"></i>
+     <span>Site URL must be a valid one</span>
+     </div>
+     
+     
+     </div>
+    <h1 class="mb-4 mt-5 text-center">BookMarker</h1>
+    <div class="border-div"></div>
+    <div class="title d-flex justify-content-center align-content-center mb-5 p-sm-3">
+      <i class="fa-solid fa-bookmark fa-2x me-2" id="green-icon"></i>
+    <h4 class="text-center">Bookmark your favorite sites</h4>
+    <i class="fa-solid fa-bookmark fa-2x ms-2" id="yellow-icon"></i>
+    </div>
+    <i class="fa-solid fa-book-bookmark pe-2 " ></i>
+    <span class="mb-4">Site Name</span>
+    <form class="form-floating mt-2 mb-3">
+     
+      <input oninput="validNameData()" type="text" class="form-control" placeholder="BookMark Name" value="" id="site-name">
+      <label for="floatingInputInvalid">BookMark Name</label>
+    </form>
+    <i class="fa-solid fa-link pe-2"></i>
+    <span class="mb-4 ">Site URL</span>
+    <form class="form-floating mt-2">
+     
+      <input type="url" oninput="validUrlData()" class="form-control"  placeholder="BookMark URl" value="" id="site-url">
+      <label for="floatingInputInvalid">Site URL</label>
+    </form>
+    <button onclick="visited_site()" class="d-block m-auto border-0 pt-2 pb-2 pe-5 ps-5 rounded-1 mt-4">Submit</button>
+    <div class="border-div"></div>
+
+    <table class=" mt-4 w-100 bg-white p-2 text-center table ">
+      <thead >
+       <tr class="">
+        <th >Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+       </tr>
+      </thead>
+      <tbody id="table_body">
+        
+      </tbody>
+      
+    </table>
+  </div>
+       
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+   
+  </body>
+</html>
